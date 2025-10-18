@@ -1,6 +1,6 @@
 // Netlify Edge Function
 export default async (request, context) => {
-  const BASE44_ORIGIN = "https://patoolafam.base44.app";
+  const BASE44_ORIGIN = "https://patoolafam.base44.app/";
   const incomingUrl = new URL(request.url);
   const targetUrl = new URL(incomingUrl.pathname + incomingUrl.search, BASE44_ORIGIN);
   const upstreamResp = await fetch(targetUrl);
@@ -21,3 +21,4 @@ export default async (request, context) => {
     status: 200
   });
 };
+corrige dominio base44
