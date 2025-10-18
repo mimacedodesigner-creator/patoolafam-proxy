@@ -1,0 +1,7 @@
+[build]
+  publish = "public"
+
+# Run the Edge Function on every request, before static files are served.
+[[edge_functions]]
+  path = "/*"
+  function = "strip-badge"
